@@ -1,3 +1,7 @@
+you can install this as a npm module:
+
+npm i matrix-component
+
 The Matrix component expect two arguments:
 
 - list: is a two dimentional array that contains the definition of each cell. Each cell can contain styles, classes and html content, also you can pass an onClick: property for setup the onClick event for that element
