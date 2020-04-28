@@ -43,3 +43,14 @@ let params = {
 };
 
 The cell definition will owerryde any collitioned property
+
+## Helpers
+
+Also we have helpers, the toGrid helper returns a two dimentional array from a regular array
+usage:
+import Matrix, { toGrid } from "matrix-component";
+const list = toGrid(
+      shuffle([...Array.from(Array(2).keys()), ...Array.from(Array(2).keys())])
+    );
+
+you can find a more real example here: https://github.com/JuanMarchetto/memo
