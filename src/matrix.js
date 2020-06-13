@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import defaultStyles from './default-styles'
 import renderRow from './row'
+import {getClasses} from './helpers';
 
 const Matrix = ({ list, params }) => {
   useEffect(() => {}, [list, params]);
@@ -8,7 +9,7 @@ const Matrix = ({ list, params }) => {
   return (
     <section
       style={{ ...styles?.container, ...params?.container?.styles }}
-      className={'matrix-container ' + params?.container?.classes || ''}
+      className={getClasses(['matrix-container', params?.container?.classes])}
     >
       {list.map((row, rowIndex) =>
         renderRow(row, rowIndex, params, styles))
