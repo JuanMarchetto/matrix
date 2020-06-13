@@ -1,1 +1,1 @@
-export { default } from "./matrix.js";
+export { default } from './matrix.js';

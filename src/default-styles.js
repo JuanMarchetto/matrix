@@ -12,3 +12,5 @@ export const defaultStyles = (rowsLength, cellsByRow) => ({
     width: `${100 / cellsByRow}%`,
   },
 });
+
+export default defaultStyles;
