@@ -1,16 +1,23 @@
 import React from 'react';
-import renderCell from './cell'
+import RenderCell from './cell'
 
-const renderRow = (row, rowIndex, params, styles) =>(
+const RenderRow = ({row, rowIndex, params, styles}) =>(
   <div
     style={{ ...styles?.rows, ...params?.rows?.styles }}
     className={params?.rows?.classes}
     key={rowIndex}
   >
     {row.map((cell, cellIndex) =>
-      renderCell(cell,rowIndex, cellIndex, params, styles)
+      <RenderCell
+        cell = {cell}
+        cellIndex = {cellIndex}
+        params = {params}
+        styles = {styles}
+      >
+        {cell.childs}
+      </RenderCell>
     )}
   </div>
 )
 
-export default renderRow;
+export default RenderRow;

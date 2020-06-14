@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import defaultStyles from './default-styles'
-import renderRow from './row'
+import RenderRow from './row'
 import {getClasses} from './helpers';
 
 const Matrix = ({ list, params }) => {
@@ -12,7 +12,13 @@ const Matrix = ({ list, params }) => {
       className={getClasses(['matrix-container', params?.container?.classes])}
     >
       {list.map((row, rowIndex) =>
-        renderRow(row, rowIndex, params, styles))
+        <RenderRow 
+          row = {row}
+          rowIndex = {rowIndex}
+          params = {params}
+          styles = {styles}
+        />
+        )
       }
     </section>
   );

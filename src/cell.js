@@ -1,28 +1,18 @@
-
 import React from 'react';
 import {getClasses} from './helpers';
 
-const renderCell = (cell,rowIndex, cellIndex, params, styles) => (
+const RenderCell = ({cell, cellIndex, params, styles, children}) => (
   <div
     style={{
-      ...styles?.childs,
-      ...params?.childs?.styles,
+      ...styles?.cells,
+      ...params?.cells?.styles,
       ...cell.styles,
     }}
-    className={ getClasses([params?.childs?.classes, cell.classes]) }
+    className={ getClasses([params?.cells?.classes, cell.classes]) }
     key={cellIndex}
-    onClick={
-      cell.onClick
-        ? () => {
-            cell.onClick(rowIndex, cellIndex);
-          }
-        : params?.childs?.onClick
-        ? () => params.childs.onClick(rowIndex, cellIndex)
-        : undefined
-    }
   >
-    <div dangerouslySetInnerHTML={{ __html: cell.html }} />
+    {children}
   </div>
 );
 
-export default renderCell
+export default RenderCell

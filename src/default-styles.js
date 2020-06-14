@@ -8,7 +8,7 @@ export const defaultStyles = (rowsLength, cellsByRow) => ({
     display: 'flex',
     height: `${100 / rowsLength}%`,
   },
-  childs: {
+  cells: {
     width: `${100 / cellsByRow}%`,
   },
 });
