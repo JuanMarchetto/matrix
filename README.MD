@@ -35,7 +35,7 @@ let params = {
 		styles: {},
 		classes: "row"
 		},
-	childs: {
+	cells: {
 		styles: {color:"red"},
 		classes: "child",
 		onClick: ()=>{}

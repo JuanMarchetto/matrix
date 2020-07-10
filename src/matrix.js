@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import defaultStyles from './default-styles'
-import RenderRow from './row'
-import {getClasses} from './helpers';
+import defaultStyles from './default-styles';
+import RenderRow from './row';
+import { getClasses } from './helpers';
 
 const Matrix = ({ list, params }) => {
   useEffect(() => {}, [list, params]);
@@ -11,17 +11,16 @@ const Matrix = ({ list, params }) => {
       style={{ ...styles?.container, ...params?.container?.styles }}
       className={getClasses(['matrix-container', params?.container?.classes])}
     >
-      {list.map((row, rowIndex) =>
-        <RenderRow 
-          row = {row}
-          rowIndex = {rowIndex}
-          params = {params}
-          styles = {styles}
+      {list.map((row, rowIndex) => (
+        <RenderRow
+          row={row}
+          rowIndex={rowIndex}
+          params={params}
+          styles={styles}
         />
-        )
-      }
+      ))}
     </section>
   );
-}
+};
 
 export default Matrix;
