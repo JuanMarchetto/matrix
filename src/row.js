@@ -7,7 +7,6 @@ const RenderRow = ({
   <div
     style={{ ...styles?.rows, ...params?.rows?.styles }}
     className={params?.rows?.classes}
-    key={rowIndex}
   >
     {row.map((cell, cellIndex) => (
       <RenderCell
@@ -15,6 +14,7 @@ const RenderRow = ({
         cellIndex={cellIndex}
         params={params}
         styles={styles}
+        key={cellIndex}
       >
         {cell.childs}
       </RenderCell>

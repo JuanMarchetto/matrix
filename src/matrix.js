@@ -17,6 +17,7 @@ const Matrix = ({ list, params }) => {
           rowIndex={rowIndex}
           params={params}
           styles={styles}
+          key={rowIndex}
         />
       ))}
     </section>

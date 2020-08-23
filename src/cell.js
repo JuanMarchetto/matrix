@@ -11,7 +11,6 @@ const RenderCell = ({
       ...cell.styles,
     }}
     className={getClasses([params?.cells?.classes, cell.classes])}
-    key={cellIndex}
   >
     {children}
   </div>

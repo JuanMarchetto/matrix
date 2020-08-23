@@ -1,6 +1,6 @@
 {
   "name": "matrix-component",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A React component to render a grid like view from a two-dimentional array",
   "main": "./build/index.js",
   "scripts": {
