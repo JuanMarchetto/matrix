@@ -2,7 +2,7 @@ import React from 'react';
 import { getClasses } from './helpers';
 
 const RenderCell = ({
-  cell, cellIndex, params, styles, children,
+  cell, params, styles, children,
 }) => (
   <div
     style={{

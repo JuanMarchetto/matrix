@@ -2,7 +2,7 @@ import React from 'react';
 import RenderCell from './cell';
 
 const RenderRow = ({
-  row, rowIndex, params, styles,
+  row, params, styles,
 }) => (
   <div
     style={{ ...styles?.rows, ...params?.rows?.styles }}
@@ -11,7 +11,6 @@ const RenderRow = ({
     {row.map((cell, cellIndex) => (
       <RenderCell
         cell={cell}
-        cellIndex={cellIndex}
         params={params}
         styles={styles}
         key={cellIndex}
